@@ -2,19 +2,17 @@
 - name: Converge master
   hosts:
    - kube_master
-  tasks:
-    - name: "Include Ansible Orchestration"
-      include_role:
-        name: "ansible-orchestration"
-      vars:
-        secure_logs: False
-        kubernetes_allow_pods_on_master: False
-        hostname: "master.osgiliath.test"
-        hostname_reboot: false
-        kube_firewall_zone: 'public'
-        docker_install_compose: false
-        company_domain: osgiliath.test
-        company_realm_password: '123ADMin'
-        reset_kube: True
+  vars:
+    secure_logs: False
+    kubernetes_allow_pods_on_master: False
+    hostname: "master.osgiliath.test"
+    hostname_reboot: false
+    kube_firewall_zone: 'public'
+    docker_install_compose: false
+    company_domain: osgiliath.test
+    company_realm_password: '123ADMin'
+    reset_kube: True
 #        kube_alt_names:
 #          - "kubeadm.osgiliath.net"
+  roles:
+    - role: tcharl.ansible_iam
