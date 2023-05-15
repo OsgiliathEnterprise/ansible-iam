@@ -15,4 +15,4 @@
 #        kube_alt_names:
 #          - "kubeadm.osgiliath.net"
   roles:
-    - role: tcharl.ansible_iam
+    - role: ansible-iam

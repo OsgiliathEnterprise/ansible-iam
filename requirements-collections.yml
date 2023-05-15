@@ -1,9 +1,7 @@
 ---
 collections:
   - name: freeipa.ansible_freeipa
-    source: https://galaxy.ansible.com
     path: ../community-collections
 
   - name: community.crypto
-    source: https://galaxy.ansible.com
     path: ../community-collections
