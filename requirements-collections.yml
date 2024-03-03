@@ -1,7 +1,8 @@
 ---
 collections:
   - name: freeipa.ansible_freeipa
-    path: ../community-collections
-
   - name: community.crypto
-    path: ../community-collections
+  - name: community.general
+  - name: kubernetes.core
+  - name: ansible.posix
+  - name: ansible.netcommon
